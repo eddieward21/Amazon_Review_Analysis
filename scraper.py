@@ -11,7 +11,7 @@ with open('amazon_reviews_final.csv','w', newline='', encoding = 'utf8') as f:
     my_writer.writerow(header)
 
     for i in range(1, 51):
-        url = "https://www.amazon.com/Samsung-Chromebook-Celeron-Processor-Gigabit/product-reviews/B07XL4JHXR/ref=cm_cr_getr_d_paging_btm_next_3?ie=UTF8&reviewerType=all_reviews&pageNumber={i}.format(i=i)"
+        url = "https://www.amazon.com/Samsung-Chromebook-Celeron-Processor-Gigabit/product-reviews/B07XL4JHXR/ref=cm_cr_getr_d_paging_btm_next_3?ie=UTF8&reviewerType=all_reviews&pageNumber={i}".format(i = i)
         response = requests.get(url, headers = { 
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', 
         'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 
